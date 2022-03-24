@@ -174,30 +174,56 @@ body {
     font-size: 22pt;
     text-decoration: underline;
 }
+.journal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 #journal {
     background-color: #222;
     width: 400px;
-    margin-left: 25%;
-    padding: 15px;
+    padding: 5px;
     margin-top: 25px;
+    border: 1px solid #fff;
+    margin-right: 5px;
 }
-#journal h1 {
-    text-decoration: underline;
+#journal h1, h2 {
+    text-decoration: none;
+    text-align: center;
 }
-#journal input, label {
+#journal label {
     margin: 5px;
+    text-align: left;
+    padding: 5px;
+}
+#journal input, textarea {
+    border: 1px solid #FFF;
+    background-color: #222;
+    color: #FFF;
+    margin: 10px;
+    padding: 15px;
+}
+#journal button {
+    margin: 10px;
+    background-color: #222;
+    border: 1px solid #FFF;
+    color: #FFF;
+    padding: 15px;
 }
 #dreamlist {
     width: 400px;
-    background-color: #000;
-    text-align: center;
-    display: flex;
-    padding: 5px;
+    background-color: #222;
+    padding: 0px;
+    margin-top: 25px;
+    text-align: left;
+    border: 1px solid #FFF;
+}
+#dreamlist label, input {
+    margin-bottom: 10px;
 }
 #dream {
     padding: 5px;
     border: 1px solid #FFF;
-    text-align: center;
 }
 .myDiv p {
     padding: 15px;

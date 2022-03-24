@@ -13,8 +13,28 @@ async function getDream(url) {
     for (let i = 0; i < data['dreamLog'].length; i++) {
       dreamName = data['dreamLog'][i]['name'];
       dream = data['dreamLog'][i]['dream'];
-      document.getElementById('dreamlog').innerHTML += `<div id="dream">${dreamName}'s dream: ${dream}</div>`;
+      document.getElementById('dreamlog').innerHTML += `<div id="dream"><b>${dreamName}'s dream:</b> ${dream}</div>`;
     }
+}
+async function searchDreams() {
+
+  document.getElementById('dreamlog').innerHTML = "";
+
+  const response = await fetch(api_url);
+
+  const data = await response.json();
+  console.log(data);
+
+  const searchTerm = document.getElementById('nameSearch').value;
+
+  for (let i = 0; i < data['dreamLog'].length; i++) {
+    dreamName = data['dreamLog'][i]['name'];
+    dream = data['dreamLog'][i]['dream'];
+    
+    if(dreamName === searchTerm) {
+      document.getElementById('dreamlog').innerHTML += `<div id="dream"><b>${dreamName}'s dream:</b> ${dream}</div>`
+    }
+  }
 }
 // Calling that async function
 getDream(api_url);
@@ -40,4 +60,7 @@ async function putDream(){
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
+
+  alert('Your dream has been submitted!');
+  document.location.reload();
 }

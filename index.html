@@ -91,18 +91,24 @@
             </div>
         </div>
     </div>
-    <div id="journal">
-        <h1>Dream Journal</h1>
-        <h2>Journal your dreams here for better dream recall</h2>
+    <div class="journal-container">
+        <div id="journal">
+            <h1>Dream Journal</h1>
+            <h2>Journal your dreams here for better dream recall</h2>
 
-        <form id="dream-form">
-            <label for="namelog">Enter your name here: </label><br />
-            <input type="text" id="namelog" name="namelog" required><br />
-            <label for="log">Enter your dream:</label><br />
-            <textarea id="log" name="log" rows="10" required></textarea><br />
-            <input type="button" value="Submit" onclick="putDream()">
-        </form>
+            <form id="dream-form">
+                <label for="namelog">Enter your name here: </label><br />
+                <input type="text" id="namelog" name="namelog" required><br />
+                <label for="log">Enter your dream:</label><br />
+                <textarea id="log" name="log" rows="10" cols="40" required></textarea><br />
+                <button type="button" value="Submit" onclick="putDream()">Submit</button>
+            </form>
+        </div>
         <div id="dreamlist">
+            <label for="nameSearch">Search by Name:</label>
+            <input type="text" id="nameSearch" name="nameSearch" required>
+            <button value="Search" onclick="searchDreams()">Search</button>
+            <button onclick="">Reset</button>
             <p id="dreamlog">
             </p>
         </div>
