@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucid Dream Explainer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64dfca1a40.js" crossorigin="anonymous"></script>
+    <script>
+        function expandDiv(a) {
+            var x = document.getElementById(a);
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+        function emailSubmit() {
+            var email = document.forms[0].email.value;
+            if (email.includes("@")){
+                alert ("Thanks for joining! " + email + " has been added to our newsletter");
+            } else {
+                alert  (email + " is not a valid email");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div id="logo">
+                <p><i class="far fa-moon"></i> Lucid Dreaming Explainer</p>
+            </div>
+            <div id="links">
+                <a href="#about">Video</a>
+                <a href="#methods">Methods</a>
+                <a href="#newsletter">Newsletter</a>
+                <a href="mailto:starchild@luciddreamer.com">Contact</a>
+            </div>
+            <div id="links2">
+                <ul>
+                    <li><a href="#about">Video</a></li>
+                    <li><a href="#methods">Methods</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="cont1">
+        <div class="title">
+            <h1>Explore the dream world</h1>
+            <h2><i>A realm of endless possibilities awaits you</i></h2>
+            <div class="button">
+                <a href="#about"><p>Learn more</p></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="box1">
+            <h1>How Does Lucid Dreaming Work?</h1>
+            <div class="iframe-container">
+                <iframe width="1120" height="630" src="https://www.youtube.com/embed/qH-MGqokk_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <div id="methods">
+        <div id="methodContainer">
+            <h1>Methods</h1>
+
+            <button onclick="expandDiv('myDIV')" class="mButton">Wake Back to Bed (WBTB) <i id="caret" class="fas fa-caret-down"></i>
+            </button>
+            <div id="myDIV" class="myDiv">
+                <h4>Begin your lucid dreaming journey with the easiest method called <br><i>"Wake Back To Bed"</i></h4>
+                <p>To proceed with the WBTB Lucid Dreaming method, you will begin by going to bed as you normally would, but set an alarm for 5 hours from the time you go to bed. There is a good chance that you will be awoken in the middle of an REM sleep cycle. Immediately you can go back to sleep and there is a great chance that you will find yourself conscious going into a dream. This method can be practiced and become a reliable method to induce a lucid dream. Keep track of the dreams you have using this method in a <i>dream journal</i> to better help you remember your future dreams. </p>
+            </div>
+            <button onclick="expandDiv('myDIV2')" class="mButton">Dream Journaling <i id="caret" class="fas fa-caret-down"></i></button>
+            <div id="myDIV2" class="myDiv">
+                <h4>Continue your lucid dreaming journey by keeping a dream journal!</h4>
+                <p>The problem, for many people, is that they do not remember the dreams that they have. Practicing dream recall is an invaluable practice when pursuing lucid dreaming. Get yourself a journal and place it next to your bed. When you wake up, write the details of your dreams down before you forget. As you practice this, you will begin to recall your dreams more and more. <br><br>Another important side note is to abstain from drugs/alcohol, as these substances can interfere with normal REM cycles and disturbing dream time.</p>
+            </div>
+            <button onclick="expandDiv('myDIV3')" class="mButton">Reality Checks <i id="caret" class="fas fa-caret-down"></i></button>
+            <div id="myDIV3" class="myDiv">
+                <h4>Build a habit to become more conscious of your reality.</h4>
+                <p>Another popular method to achieve lucid dreaming is to create a reality check and create a habit of practicing this. For example, I set an alarm on my watch for every hour. Everytime the alarm goes off, I pinch my nostrils and try to breate out of my nose. I can't!</p>
+                <p>The idea behind this method is that when you do this reality check in a habitual manner, you will begin to repeat this reality check even in your dreams. But in a dream where I pinch my nostrils closed, I can still breathe. This indicates to you that you are dreaming and can become lucid.</p>
+            </div>
+        </div>
+    </div>
+    <div id="journal">
+        <h1>Dream Journal</h1>
+        <h2>Journal your dreams here for better dream recall</h2>
+
+        <form id="dream-form">
+            <label for="namelog">Enter your name here: </label><br />
+            <input type="text" id="namelog" name="namelog" required><br />
+            <label for="log">Enter your dream:</label><br />
+            <textarea id="log" name="log" rows="10" required></textarea><br />
+            <input type="button" value="Submit" onclick="putDream()">
+        </form>
+        <div id="dreamlist">
+            <p id="dreamlog">
+            </p>
+        </div>
+    </div>
+   
+
+    <div id="newsletter">
+        <h1>Learn more about lucid dreaming by joining our newsletter!</h1>
+        <p>Get the latest information floating around the lucid dreaming world!</p>
+        <form onsubmit="emailSubmit()">
+            <label for="email">Email: </label><input type="text" id="email" name="email" label="Enter email"/>
+            <input type="submit" />
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
