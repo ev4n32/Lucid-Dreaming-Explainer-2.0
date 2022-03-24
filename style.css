@@ -8,7 +8,8 @@ body, header, p {
 }
 body {
     color: #FFF;
-    background: url("starbg.png") repeat;
+    /*background: url("starbg.png") repeat;*/
+    background-color: #000;
 }
 /* NAVBAR START */
 .head {
@@ -137,6 +138,8 @@ body {
     flex-wrap: wrap;
     margin-left: 15%;
     margin-right: 15%;
+    background-color: #222;
+    border: 1px solid #fff;
 }
 #about .box1{
     width: 1200px;
@@ -173,57 +176,6 @@ body {
     text-align: center;
     font-size: 22pt;
     text-decoration: underline;
-}
-.journal-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-#journal {
-    background-color: #222;
-    width: 400px;
-    padding: 5px;
-    margin-top: 25px;
-    border: 1px solid #fff;
-    margin-right: 5px;
-}
-#journal h1, h2 {
-    text-decoration: none;
-    text-align: center;
-}
-#journal label {
-    margin: 5px;
-    text-align: left;
-    padding: 5px;
-}
-#journal input, textarea {
-    border: 1px solid #FFF;
-    background-color: #222;
-    color: #FFF;
-    margin: 10px;
-    padding: 15px;
-}
-#journal button {
-    margin: 10px;
-    background-color: #222;
-    border: 1px solid #FFF;
-    color: #FFF;
-    padding: 15px;
-}
-#dreamlist {
-    width: 400px;
-    background-color: #222;
-    padding: 0px;
-    margin-top: 25px;
-    text-align: left;
-    border: 1px solid #FFF;
-}
-#dreamlist label, input {
-    margin-bottom: 10px;
-}
-#dream {
-    padding: 5px;
-    border: 1px solid #FFF;
 }
 .myDiv p {
     padding: 15px;
@@ -262,6 +214,95 @@ body {
 }
 /* END METHODS */
 
+/* START JOURNAL */
+.journal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#journal {
+    background-color: #222;
+    width: 450px;
+    padding: 5px;
+    margin-top: 25px;
+    border: 1px solid #fff;
+    margin-right: 5px;
+}
+#journal h1, h2 {
+    text-decoration: none;
+    text-align: center;
+}
+#journal h1 {
+    text-decoration: underline;
+}
+#journal label {
+    margin: 5px;
+    text-align: left;
+    padding: 5px;
+}
+#journal input, textarea {
+    border: 1px solid #FFF;
+    background-color: #222;
+    color: #FFF;
+    margin: 10px;
+    padding: 10px;
+}
+#journal button {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #222;
+    border: 1px solid #FFF;
+    color: #FFF;
+    padding: 5px;
+}
+#journal button:hover {
+    background-color: #12d3cf;
+}
+#dreamlist {
+    width: 450px;
+    height: 500px;
+    background-color: #222;
+    padding: 15px;
+    margin-top: 25px;
+    border: 1px solid #FFF;
+    text-align: center;
+    overflow-y: auto;
+}
+#dreamlog {
+    text-align:left;
+}
+#dreamlist label, input {
+    margin-bottom: 10px;
+}
+#dreamlist input {
+    background-color: #222;
+    border: 1px solid #fff;
+    padding: 5px;
+    color: #fff;
+    font-size: 15px;
+}
+#dreamlist button {
+    background-color: #222;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px;
+    margin-left: 5px;
+}
+#dreamlist button:hover {
+    background-color: #12d3cf;
+}
+#dreamlist #order {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight:bold;
+}
+#dream {
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #FFF;
+}
+
 /* START NEWSLETTER */
 #newsletter {
     margin-left: 15%;
@@ -270,7 +311,8 @@ body {
     margin-bottom: 20px;
     padding-bottom: 15px;
     text-align: center;
-    border: 1px dotted #FFF;
+    border: 1px solid #FFF;
+    background-color: #222;
 }
 #newsletter input {
     margin: 5px;

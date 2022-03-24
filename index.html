@@ -8,24 +8,6 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/64dfca1a40.js" crossorigin="anonymous"></script>
-    <script>
-        function expandDiv(a) {
-            var x = document.getElementById(a);
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-        function emailSubmit() {
-            var email = document.forms[0].email.value;
-            if (email.includes("@")){
-                alert ("Thanks for joining! " + email + " has been added to our newsletter");
-            } else {
-                alert  (email + " is not a valid email");
-            }
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -37,6 +19,7 @@
                 <a href="#about">Video</a>
                 <a href="#methods">Methods</a>
                 <a href="#newsletter">Newsletter</a>
+                <a href="#journal">Dream Journal</a>
                 <a href="mailto:starchild@luciddreamer.com">Contact</a>
             </div>
             <div id="links2">
@@ -44,6 +27,7 @@
                     <li><a href="#about">Video</a></li>
                     <li><a href="#methods">Methods</a></li>
                     <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="#journal">Dream Journal</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -101,14 +85,15 @@
                 <input type="text" id="namelog" name="namelog" required><br />
                 <label for="log">Enter your dream:</label><br />
                 <textarea id="log" name="log" rows="10" cols="40" required></textarea><br />
-                <button type="button" value="Submit" onclick="putDream()">Submit</button>
+                <button type="button" value="Submit" onclick="postDream()">Submit</button>
             </form>
         </div>
         <div id="dreamlist">
             <label for="nameSearch">Search by Name:</label>
             <input type="text" id="nameSearch" name="nameSearch" required>
             <button value="Search" onclick="searchDreams()">Search</button>
-            <button onclick="">Reset</button>
+            <button onclick="resetDreams()">Reset</button>
+            <p id="order">Most Recent</p>
             <p id="dreamlog">
             </p>
         </div>
