@@ -42,6 +42,7 @@ async function getDream(url) {
       document.getElementById('dreamlog').innerHTML += `<div id="dream"><b>${dreamName}'s dream:</b> ${dream}<br><sub>${date}</sub></div>`;
     }
 }
+getDream(api_url);
 
 // Searches through dreamLog array in Pantry Basket
 async function searchDreams() {
@@ -73,13 +74,15 @@ async function searchDreams() {
       }
   }
 }
+
 function resetDreams() {
   document.getElementById('dreamlog').innerHTML = ""
   getDream(api_url);
 }
-// Calling that async function
-getDream(api_url);
 
+
+
+//Checks user inputs to make sure they are filled out, and if filled out correctly, runs the putDream function
 function postDream(){
   if(document.getElementById('namelog').value === "" || document.getElementById('log').value === "") {
     alert('You must complete the form to submit a dream');
@@ -88,11 +91,22 @@ function postDream(){
   }
 }
 async function putDream(){
+  //Date info
   const date = new Date();
   const timestamp = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
+
+  //User inputs
+  let dreamName = document.getElementById('namelog').value;
+  let dream = document.getElementById('log').value;
+  //Capitalize first letter of name
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  dreamName = capitalizeFirstLetter(dreamName);
+
   const dreamData = {dreamLog:[{
-    name : document.getElementById('namelog').value,
-    dream : document.getElementById('log').value,
+    name : dreamName,
+    dream : dream,
     date: timestamp
   }]}
   var myHeaders = new Headers();

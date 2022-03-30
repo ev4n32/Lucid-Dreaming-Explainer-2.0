@@ -8,8 +8,7 @@ body, header, p {
 }
 body {
     color: #FFF;
-    /*background: url("starbg.png") repeat;*/
-    background-color: #000;
+    background: url("starbg.png") repeat;
 }
 /* NAVBAR START */
 .head {
@@ -64,7 +63,6 @@ body {
     padding: 6.5px;
     margin: 0;
     border: 1px solid black;
-    flex-direction: column;
 }
 #links2 ul li a:hover {
     color:#12d3cf;
@@ -189,6 +187,7 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: center;
+    background-color: #222;
 }
 .mButton {
     background: rgb(34,193,195);
@@ -264,6 +263,7 @@ body {
     background-color: #222;
     padding: 15px;
     margin-top: 25px;
+    margin-right: 5px;
     border: 1px solid #FFF;
     text-align: center;
     overflow-y: auto;
@@ -347,14 +347,18 @@ body {
 /* TABLETS + BIGGER PHONES */ 
 @media only screen and (max-width: 736px) {
     body {
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     #links {
         display: none;
     }
+    #links2 {
+        font-size: 12px;
+    }
     .head {
-        margin: auto;
+        margin-left: 5px;
+        margin-right: 5px;
         text-align: center;
         display: flex;
         flex-direction: column;
