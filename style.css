@@ -16,17 +16,23 @@ body {
     padding: 7.5px;
     background: rgb(34,193,195);
     background: linear-gradient(151deg, #12d3cf 0%, rgba(253,187,45,1) 100%);
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
+    justify-content: space-between;
     font-weight: bold;
     height: 30px;
     color: #333;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+#logo {
+    margin-top: 2px;
 }
 #links {
-    text-align: right;
-    font-size: 20px;
-    margin: auto;
-    margin-right: 7.5px;
+    font-size: 15px;
+    margin-top: 5px;
 }
 #links a {
     text-decoration: none;
@@ -34,36 +40,13 @@ body {
     padding: 5px;
     margin: 0;
     border: 1px solid black;
-    flex-direction: row;
 }
 #links a:hover {
     color:#12d3cf;
     border: 1px solid #12d3cf;
 }
 #links2 {
-    font-size: 12pt;
-    padding: 0;
-    margin-right: 35px;
-}
-#links2 ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-}
-#links2 ul li {
-    padding-top: 0px;
-    margin-right: 5px;
-}
-#links2 ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 6.5px;
-    margin: 0;
-    border: 1px solid black;
-}
-#links2 ul li a:hover {
-    color:#12d3cf;
-    border: 1px solid #12d3cf;
+    display: none;
 }
 /* NAVBAR END */
 
@@ -229,9 +212,6 @@ body {
     text-decoration: none;
     text-align: center;
 }
-#journal h1 {
-    text-decoration: underline;
-}
 #journal label {
     margin: 5px;
     text-align: left;
@@ -307,13 +287,13 @@ body {
     border: 1px solid #222;
     padding: 5px;
     position: relative;
-    text-align: right;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    left: 62%;
+    left: 59%;
     bottom: 7.5%;
-    width: 17%;
+    width: 20%;
 }
 .count div {
     font-size: 12px;
@@ -341,48 +321,91 @@ body {
 /* ************** */
 /* MOBILE SETTING */
 /* ************** */
-@media only screen and (max-width: 375px) {
-    .head {
-        font-size: 14pt;
-        margin-top: 5px;
-        height: 10px;
-    }
-    #links2 {
-        font-size: 10pt;
-    }
-}
-@media only screen and (min-width: 736px) {
-    #links2 {
-        display: none;
-    }
-    .head {
-        margin-left: 12.5%;
-        margin-right: 12.5%;
-        margin-top: 20px;
-        border-radius: 5px;
-    }
-}
 
+@media only screen and (max-width: 1024px) {
+    .head {
+        font-size: 10pt;
+        flex-wrap:nowrap;
+        display: flex;
+        justify-content: space-between;
+    }
+    #links {
+        margin-top: 5px;
+    }
+    #logo {
+        margin-top: 7.5px;
+    }
+    #links a {
+        font-size: 10px;
+        margin: 0;
+    }
+    .title h1 {
+        font-size: 35px;
+        margin-top: 200px;
+    }
+    .title h2 {
+        font-size: 15px;
+    }
+    .mButton {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .head {
+        font-size: 22px;
+    }
+    #journal {
+        width: 90%;
+        text-align: center;
+    }
+    #journal textarea {
+        width: 90%;
+    }
+    #dreamlist {
+        width: 85%;
+    }
+    #dreamlist button {
+        margin: 10px;
+    }
+}
 /* TABLETS + BIGGER PHONES */ 
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 767px) {
     body {
-        margin-left: 0px;
-        margin-right: 0px;
+        margin: 0;
     }
     #links {
         display: none;
     }
     #links2 {
-        font-size: 12px;
+        font-size: 9pt;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #links2 a {
+        text-decoration: none;
+        color: #222;
+        padding: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+        display: block;
+        border: 1px solid black;
+        height: 15px;
+    }
+    #links2 a:hover {
+        color:#12d3cf;
+        border: 1px solid #12d3cf;
     }
     .head {
-        margin-left: 5px;
-        margin-right: 5px;
         text-align: center;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         background-color: #FFF;
-        height: 70px;
+        height: 60px;
+        margin: 0;
     }
     .cont1 {
         margin: 0;
@@ -419,14 +442,51 @@ body {
     .mButton {
         width: 90%;
         font-size: 14pt;
+        text-align: center;
     }
     .myDiv {
         width: 85%;
     }
+    #newscont {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
     #newsletter {
-        margin: 10px;
+        margin: 0;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
     }
     .box1 h1 {
         width: 50%;
+    }
+    .count {
+        left: 75%;
+    }
+    #journal {
+        width: 90%;
+        text-align: center;
+    }
+    #journal textarea {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 280px) {
+    .head {
+        height: 120px;
+    }
+    .mButton {
+        font-size: 12pt;
+    }
+    #journal textarea {
+        width: 75%;
+    }
+    .count {
+        left: 33%;
+        width: 75px;
+        bottom: 5px;
+        text-align: center;
     }
 }
