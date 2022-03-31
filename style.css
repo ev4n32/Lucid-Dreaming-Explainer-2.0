@@ -7,22 +7,19 @@ body, header, p {
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    color: #FFF;
-    background: url("starbg.png") repeat;
+    color: #222;
+    /*background: url("starbg.png") repeat;*/
+    background-color: #fff;
 }
 /* NAVBAR START */
 .head {
     padding: 7.5px;
     background: rgb(34,193,195);
     background: linear-gradient(151deg, #12d3cf 0%, rgba(253,187,45,1) 100%);
-    border-radius: 5px;
     font-size: 25px;
     display: flex;
     font-weight: bold;
     height: 30px;
-    margin-top: 10px;
-    margin-left: 15%;
-    margin-right: 15%;
     color: #333;
 }
 #links {
@@ -36,7 +33,7 @@ body {
     color: #333;
     padding: 5px;
     margin: 0;
-    border: 1px dotted black;
+    border: 1px solid black;
     flex-direction: row;
 }
 #links a:hover {
@@ -72,14 +69,17 @@ body {
 
 /* SPLASH PAGE */
 .cont1 {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 15px;
     background-color: #fcf9ec;
     display: flex;
     flex-direction: column;
     background: url("lucid2.png") no-repeat center;
     background-size: 1080px;
+    border-radius: 5px;
     color: #b0f4e6;
+
 }
 .title {
     margin-top: 10%;
@@ -136,8 +136,6 @@ body {
     flex-wrap: wrap;
     margin-left: 15%;
     margin-right: 15%;
-    background-color: #222;
-    border: 1px solid #fff;
 }
 #about .box1{
     width: 1200px;
@@ -147,10 +145,9 @@ body {
 .box1 h1 {
     text-align: center;
     padding: 15px;
-    color: #FFF;
+    color: #222;
     width: 400px;
     margin: auto;
-    text-decoration: underline;
 }
 .iframe-container {
     width: 100%;
@@ -162,6 +159,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    border-radius: 5px;
 }
 /* END VIDEO/ABOUT */
 
@@ -173,21 +171,21 @@ body {
 #methodContainer h1 {
     text-align: center;
     font-size: 22pt;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .myDiv p {
     padding: 15px;
 }
 .myDiv {
     display: none;
-    border: 1px solid #FFF;
+    border: 1px solid #222;
     width: 72.5%;
     margin: auto;
     padding: 3px;
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: center;
-    background-color: #222;
+    background-color: #fff;
 }
 .mButton {
     background: rgb(34,193,195);
@@ -220,11 +218,11 @@ body {
     justify-content: center;
 }
 #journal {
-    background-color: #222;
     width: 450px;
     padding: 5px;
     margin-top: 25px;
-    border: 1px solid #fff;
+    border: 1px solid #222;
+    border-radius: 5px;
     margin-right: 5px;
 }
 #journal h1, h2 {
@@ -240,18 +238,18 @@ body {
     padding: 5px;
 }
 #journal input, textarea {
-    border: 1px solid #FFF;
-    background-color: #222;
-    color: #FFF;
+    border: 1px solid #222;
+    background-color: #fff;
+    color: #222;
     margin: 10px;
     padding: 10px;
 }
 #journal button {
     margin-left: 10px;
     margin-bottom: 10px;
-    background-color: #222;
-    border: 1px solid #FFF;
-    color: #FFF;
+    background-color: #fff;
+    border: 1px solid #222;
+    color: #222;
     padding: 5px;
 }
 #journal button:hover {
@@ -259,32 +257,33 @@ body {
 }
 #dreamlist {
     width: 450px;
-    height: 500px;
-    background-color: #222;
+    height: 520px;
     padding: 15px;
     margin-top: 25px;
     margin-right: 5px;
-    border: 1px solid #FFF;
+    border: 1px solid #222;
+    border-radius: 5px;
     text-align: center;
     overflow-y: auto;
 }
 #dreamlog {
     text-align:left;
+    background-color: #fff;
 }
 #dreamlist label, input {
     margin-bottom: 10px;
 }
 #dreamlist input {
-    background-color: #222;
-    border: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid #222;
     padding: 5px;
-    color: #fff;
+    color: #222;
     font-size: 15px;
 }
 #dreamlist button {
-    background-color: #222;
-    border: 1px solid #fff;
-    color: #fff;
+    background-color: #fff;
+    border: 1px solid #222;
+    color: #222;
     padding: 5px;
     margin-left: 5px;
 }
@@ -300,12 +299,12 @@ body {
 #dream {
     padding: 5px;
     margin-bottom: 5px;
-    border: 1px solid #FFF;
+    border: 1px solid #222;
 }
 
 .count {
-    background-color: #222;
-    border: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid #222;
     padding: 5px;
     position: relative;
     text-align: right;
@@ -323,21 +322,21 @@ body {
 
 /* START NEWSLETTER */
 #newsletter {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 18%;
+    margin-right: 18%;
     margin-top: 50px;
     margin-bottom: 20px;
-    padding-bottom: 15px;
+    padding: 15px;
     text-align: center;
-    border: 1px solid #FFF;
-    background-color: #222;
+    border: 1px solid #222;
+    border-radius: 5px;
 }
 #newsletter input {
     margin: 5px;
     height: 30px;
-    background-color: #222;
-    border: 1px solid #fff;
-    color: #fff;
+    background-color: #fff;
+    border: 1px solid #222;
+    color: #222;
 }
 /* ************** */
 /* MOBILE SETTING */
@@ -356,12 +355,11 @@ body {
     #links2 {
         display: none;
     }
-    .cont1 {
-        margin: 5px;
-    }
     .head {
-        margin: 0;
-        border-radius: 0px;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
+        margin-top: 20px;
+        border-radius: 5px;
     }
 }
 
