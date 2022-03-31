@@ -1,6 +1,6 @@
 // Expand Div Function for collapsable buttons
 function expandDiv(a) {
-  var x = document.getElementById(a);
+  let x = document.getElementById(a);
   if (x.style.display === "block") {
       x.style.display = "none";
   } else {
@@ -8,8 +8,8 @@ function expandDiv(a) {
   }
 }
 // Verifies if email is proper format
-function emailSubmit() {
-  var email = document.forms[0].email.value;
+function emailSubmit(input) {
+  let email = document.getElementById("email").value;
   if (email.includes("@")){
       alert ("Thanks for joining! " + email + " has been added to our newsletter");
   } else {
@@ -74,7 +74,7 @@ async function searchDreams() {
       }
   }
 }
-
+//Resets log of dreams posted
 function resetDreams() {
   document.getElementById('dreamlog').innerHTML = ""
   getDream(api_url);
@@ -129,3 +129,14 @@ async function putDream(){
   alert('Your dream has been submitted!');
   document.location.reload();
 }
+
+//Displays word count and character count under the dream log text area
+let inputText = document.getElementById("log");
+let charCount = document.getElementById("char-count");
+let wordCount = document.getElementById("word-count");
+
+inputText.addEventListener("input", () => {
+  charCount.textContent = inputText.value.length + " characters";
+  let txt = inputText.value.trim();
+  wordCount.textContent = txt.split(/\s+/).filter((item) => item).length + " words";
+});

@@ -303,6 +303,24 @@ body {
     border: 1px solid #FFF;
 }
 
+.count {
+    background-color: #222;
+    border: 1px solid #fff;
+    padding: 5px;
+    position: relative;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    left: 62%;
+    bottom: 7.5%;
+    width: 17%;
+}
+.count div {
+    font-size: 12px;
+}
+
+
 /* START NEWSLETTER */
 #newsletter {
     margin-left: 15%;
@@ -317,6 +335,9 @@ body {
 #newsletter input {
     margin: 5px;
     height: 30px;
+    background-color: #222;
+    border: 1px solid #fff;
+    color: #fff;
 }
 /* ************** */
 /* MOBILE SETTING */
