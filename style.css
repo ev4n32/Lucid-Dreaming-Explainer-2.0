@@ -8,8 +8,7 @@ body, header, p {
 }
 body {
     color: #222;
-    /*background: url("starbg.png") repeat;*/
-    background-color: #fff;
+    background: url("pattern.png") repeat;
 }
 /* NAVBAR START */
 .head {

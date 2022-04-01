@@ -1,3 +1,5 @@
+
+
 // Expand Div Function for collapsable buttons
 function expandDiv(a) {
   let x = document.getElementById(a);
@@ -7,6 +9,8 @@ function expandDiv(a) {
       x.style.display = "block";
   }
 }
+
+
 // Verifies if email is proper format
 function emailSubmit(input) {
   let email = document.getElementById("email").value;
@@ -16,9 +20,13 @@ function emailSubmit(input) {
       alert  (email + " is not a valid email");
   }
 }
+
+
 //Pantry API URL
 const api_url = 
       "https://getpantry.cloud/apiv1/pantry/045f05da-4502-496e-bf5e-1ffbb280ab75/basket/dreamLogs";
+
+
 
 // Lists dreams from Pantry API basket
 async function getDream(url) {
@@ -44,7 +52,9 @@ async function getDream(url) {
 }
 getDream(api_url);
 
-// Searches through dreamLog array in Pantry Basket
+
+
+// Searches through dreamLog array in Pantry Basket and inserts into HTML
 async function searchDreams() {
 
   document.getElementById('dreamlog').innerHTML = "";
@@ -74,6 +84,9 @@ async function searchDreams() {
       }
   }
 }
+
+
+
 //Resets log of dreams posted
 function resetDreams() {
   document.getElementById('dreamlog').innerHTML = ""
@@ -90,6 +103,9 @@ function postDream(){
     putDream();
   }
 }
+
+
+//Updates the Pantry basket with the data submitted by the user
 async function putDream(){
   //Date info
   const date = new Date();
@@ -129,6 +145,7 @@ async function putDream(){
   alert('Your dream has been submitted!');
   document.location.reload();
 }
+
 
 //Displays word count and character count under the dream log text area
 let inputText = document.getElementById("log");
